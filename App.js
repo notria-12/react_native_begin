@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Picker, Slider } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Picker, Slider, Switch } from 'react-native';
 
 
 export default class App extends React.Component{
@@ -9,6 +9,7 @@ export default class App extends React.Component{
     this.state = {textValue: ""};
     this.state = {bestCaptain: 1}
     this.state = {meaningOfLife: ""}
+    this.state = {loveRN: 0}
   }
  
   // const {value} = React.useState('Useless Placeholder')
@@ -41,7 +42,11 @@ export default class App extends React.Component{
       <Slider style={{width: "75%"}}
        step={1} minimumValue={0} maximumValue={84} value={this.state.meaningOfLif} onValueChange={inValue => this.setState({meaningOfLif: inValue})}></Slider>
 
-       <TextInput valu={"Testet"}></TextInput>
+       <Switch value={this.state.loveRN} onValueChange={(inValue) => this.setState({loveRN: inValue})}>
+
+       </Switch>
+
+       
   
       </View>
     );

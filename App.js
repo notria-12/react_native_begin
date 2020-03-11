@@ -41,7 +41,7 @@ export default class App extends React.Component{
       <Slider style={{width: "75%"}}
        step={1} minimumValue={0} maximumValue={84} value={this.state.meaningOfLif} onValueChange={inValue => this.setState({meaningOfLif: inValue})}></Slider>
 
-       
+       <TextInput valu={"Testet"}></TextInput>
   
       </View>
     );
